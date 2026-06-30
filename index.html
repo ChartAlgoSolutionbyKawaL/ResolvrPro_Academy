@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ResolvrPro — Future Skills Academy</title>
+<meta name="description" content="A 10-month future-skills program. 4 levels. 40 sessions per level. 1 capstone project per year. Fit-test based — no age limit." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: {
+    heading: ['Outfit','sans-serif'],
+    body: ['Figtree','sans-serif'],
+    accent: ['Caveat','cursive']
+  } } } }
+</script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="min-h-screen">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-[#FAFAFA] border-b-[3px] border-black">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-[#D4FF33] nb-border grid place-items-center font-heading font-black text-xl">R</div>
+      <div class="leading-tight">
+        <div class="font-heading font-black text-lg md:text-xl">Resolvr<span class="text-[#FF6B6B]">Pro</span></div>
+        <div class="hidden md:block text-[10px] font-bold tracking-widest text-[#4B5563] uppercase">Future Skills Academy</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+      <a href="#hook" class="hover:text-[#FF6B6B]">Why us</a>
+      <a href="#levels" class="hover:text-[#FF6B6B]">Levels</a>
+      <a href="#curriculum" class="hover:text-[#FF6B6B]">Curriculum</a>
+      <a href="#capstone" class="hover:text-[#FF6B6B]">Capstone</a>
+      <a href="#founder" class="hover:text-[#FF6B6B]">About</a>
+      <a href="#sponsorship" class="hover:text-[#FF6B6B]">Sponsorship</a>
+      <a href="#lms" class="hover:text-[#FF6B6B] font-extrabold bg-[#D4FF33] nb-border px-3 py-1.5 nb-shadow-sm">LMS</a>
+      <a href="#" id="nav-talk" class="btn-wa font-extrabold py-2.5 px-5 nb-border shadow-[4px_4px_0_0_#111] hover:shadow-[1px_1px_0_0_#111] hover:translate-x-[3px] hover:translate-y-[3px] transition-all">💬 Talk on WhatsApp</a>
+    </nav>
+    <button id="mobile-toggle" class="md:hidden p-2 nb-border" aria-label="Menu">☰</button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t-[3px] border-black bg-white px-5 py-3 space-y-2">
+    <a href="#hook" class="block font-bold py-1.5">Why us</a>
+    <a href="#levels" class="block font-bold py-1.5">Levels</a>
+    <a href="#curriculum" class="block font-bold py-1.5">Curriculum</a>
+    <a href="#capstone" class="block font-bold py-1.5">Capstone</a>
+    <a href="#founder" class="block font-bold py-1.5">About</a>
+    <a href="#sponsorship" class="block font-bold py-1.5">Sponsorship</a>
+    <a href="#lms" class="block font-bold py-1.5 bg-[#D4FF33] px-2 nb-border">📚 LMS Dashboard</a>
+    <a href="#" id="m-nav-talk" class="block font-bold py-1.5 text-[#25D366]">💬 Talk on WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="relative grain overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <div class="inline-flex items-center gap-2 bg-white nb-border px-3 py-1.5 mb-6 nb-shadow-sm">
+        <span class="text-[#FF6B6B]">✦</span>
+        <span class="text-xs font-bold tracking-widest uppercase">Future Skills Academy · 4 Levels · Fit-test based</span>
+      </div>
+      <h1 class="font-heading font-black text-5xl md:text-7xl lg:text-[88px] leading-[.92] tracking-tighter">
+        Build today.<br/>
+        <span class="relative inline-block"><span class="relative z-10">Lead</span><span class="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-[#D4FF33] -z-0"></span></span>
+        <span class="relative inline-block"><span class="relative z-10">tomorrow.</span><span class="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-[#4ECDC4] -z-0"></span></span>
+      </h1>
+      <p class="mt-7 text-lg md:text-xl text-[#4B5563] max-w-xl leading-relaxed">Real skills. Real projects. Real impact. A 10-month future-skills program that turns learners into adaptable thinkers, confident communicators, and creative problem solvers. <b>No age limit</b> — we place every learner in the right level after a 15-minute Fit Test.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#levels" class="bg-[#D4FF33] font-extrabold text-base md:text-lg py-4 px-7 nb-border nb-shadow nb-press">Explore the 4 levels →</a>
+        <a href="#" id="hero-fit-test" class="btn-wa font-extrabold text-base md:text-lg py-4 px-7 nb-border nb-shadow nb-press" onclick="openFitTest();return false;">Take the Fit Test</a>
+        <a href="#" id="hero-talk" class="bg-black text-white font-extrabold text-base md:text-lg py-4 px-7 nb-border nb-shadow nb-press">💬 Talk to us</a>
+      </div>
+      <div class="mt-8 grid grid-cols-3 gap-3 max-w-md">
+        <div class="bg-white nb-border p-3 nb-shadow-sm"><div class="font-heading font-black text-2xl">40</div><div class="text-[10px] font-bold uppercase tracking-wider text-[#4B5563]">Sessions / year</div></div>
+        <div class="bg-white nb-border p-3 nb-shadow-sm"><div class="font-heading font-black text-2xl">10</div><div class="text-[10px] font-bold uppercase tracking-wider text-[#4B5563]">Future skills</div></div>
+        <div class="bg-white nb-border p-3 nb-shadow-sm"><div class="font-heading font-black text-2xl">1</div><div class="text-[10px] font-bold uppercase tracking-wider text-[#4B5563]">Capstone</div></div>
+      </div>
+    </div>
+    <div class="lg:col-span-5 relative">
+      <div class="relative bg-white nb-border nb-shadow-lg p-3 wobble">
+        <span class="tape" style="top:-10px;left:20px"></span>
+        <span class="tape" style="top:-10px;right:30px;transform:rotate(8deg)"></span>
+        <img src="https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=srgb&fm=jpg&w=900&q=70" alt="Students" class="w-full h-[360px] md:h-[460px] object-cover" />
+        <div class="absolute -bottom-6 -left-6 bg-[#FFD166] nb-border px-4 py-2 nb-shadow-sm font-accent text-2xl" style="transform:rotate(-6deg)">Get Unstuck. Get Ahead.</div>
+        <div class="absolute -top-7 -right-7 bg-[#FF6B6B] text-white nb-border px-3 py-2 nb-shadow-sm font-heading font-black text-sm" style="transform:rotate(8deg)">Fit-test based · No age limit</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOOK -->
+<section id="hook" class="scroll-mt bg-black text-white border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 py-20 md:py-28">
+    <p class="font-accent text-3xl md:text-4xl text-[#D4FF33] mb-4" style="transform:rotate(-2deg);display:inline-block">One honest question →</p>
+    <h2 class="font-heading font-black text-4xl md:text-6xl lg:text-7xl leading-[.95] tracking-tight">If your students score <span class="bg-[#D4FF33] text-black px-3">95%</span> in computer science today,<br/>does that mean they're ready for <span class="underline decoration-[#FF6B6B] decoration-[6px] underline-offset-[10px]">tomorrow's workplace?</span></h2>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="border-[3px] p-6" style="background:#1d1d1d;border-color:#FF6B6B"><div class="font-heading font-black text-3xl text-[#FF6B6B]">10-20 yr</div><p class="mt-2 text-white/85">professionals still seek help with AI, automation, and adapting.</p></div>
+      <div class="border-[3px] p-6" style="background:#1d1d1d;border-color:#4ECDC4"><div class="font-heading font-black text-3xl text-[#4ECDC4]">The gap</div><p class="mt-2 text-white/85">isn't between school &amp; college. It's between learning &amp; doing.</p></div>
+      <div class="border-[3px] p-6" style="background:#1d1d1d;border-color:#FFD166"><div class="font-heading font-black text-3xl text-[#FFD166]">We bridge</div><p class="mt-2 text-white/85">it with project-based, corporate-style problem solving.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section id="levels" class="scroll-mt py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-black text-white nb-border px-4 py-2 nb-shadow-sm">
+      <span class="font-heading font-black text-lg text-[#FFD166]">LEVELS</span>
+      <span class="font-bold tracking-widest uppercase text-xs">Fit-test based pathway · No age limit</span>
+    </div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">4 Levels.<br/><span class="bg-[#D4FF33] px-2">One pathway.</span> One transformation.</h2>
+    <p class="mt-4 text-base md:text-lg text-[#4B5563] max-w-2xl">Every learner takes a <b>15-minute Fit Test</b> before joining. We place you in the level that matches your current skills and interest — not your age.</p>
+    <div id="levels-grid" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href="#" id="levels-fit-test" class="btn-wa font-extrabold py-3 px-6 nb-border nb-shadow-sm nb-press" onclick="openFitTest();return false;">Take the 15-min Fit Test</a>
+      <span class="font-semibold text-[#4B5563]">Not sure which level fits? Message us and we'll guide you.</span>
+    </div>
+  </div>
+</section>
+
+<!-- LMS DASHBOARD MODULE -->
+<section id="lms" class="scroll-mt py-20 md:py-28 bg-black text-white border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-white text-black nb-border px-4 py-2 nb-shadow-sm">
+      <span class="font-heading font-black text-lg text-[#FF6B6B]">LMS MODULE</span>
+      <span class="font-bold tracking-widest uppercase text-xs">Learning Operating System · 160 Sessions · 4 Levels</span>
+    </div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">Your learning<br/><span class="bg-[#D4FF33] text-black px-2">command centre.</span></h2>
+    <p class="mt-4 text-base md:text-lg text-white/85 max-w-3xl">Track progress across all 160 sessions. Click any session to see full details: theory, practice activities, tool guides, and homework with solutions.</p>
+
+    <!-- Stats Row -->
+    <div id="lms-stats" class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+
+    <!-- Level Selector -->
+    <div id="lms-level-btns" class="mt-10 flex flex-wrap gap-2"></div>
+
+    <!-- Session Grid -->
+    <div id="lms-sessions" class="mt-6"></div>
+
+    <!-- Session Detail Panel -->
+    <div id="lms-detail" class="mt-8 hidden"></div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum" class="scroll-mt py-20 md:py-28 bg-[#F2EFFF] border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-black text-white nb-border px-4 py-2 nb-shadow-sm">
+      <span class="font-heading font-black text-lg text-[#9D8DF1]">CURRICULUM</span>
+      <span class="font-bold tracking-widest uppercase text-xs">160 Sessions · Tap any to see example, practice &amp; AI prompt</span>
+    </div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">Every session has an <span class="bg-[#D4FF33] px-2">example</span>, a <span class="bg-[#4ECDC4] px-2">practice task</span>, and an <span class="bg-[#FFD166] px-2">AI prompt</span>.</h2>
+    <p class="mt-4 text-lg text-[#4B5563]">No login. Browse the whole curriculum. Click any session to see what the learner will actually do.</p>
+
+    <div id="level-tabs" class="mt-10 flex flex-wrap gap-2"></div>
+    <div id="level-content" class="mt-8"></div>
+  </div>
+</section>
+
+<!-- CAPSTONE -->
+<section id="capstone" class="scroll-mt py-20 md:py-28 bg-black text-white border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-white text-black nb-border px-4 py-2 nb-shadow-sm">
+      <span class="font-heading font-black text-lg text-[#FF6B6B]">SAMPLE CAPSTONE</span>
+      <span class="font-bold tracking-widest uppercase text-xs">Innovator Level · Final-year deliverable</span>
+    </div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">See what an Innovator student<br/><span class="bg-[#D4FF33] text-black px-2">actually delivers.</span></h2>
+    <p class="mt-5 text-base md:text-lg text-white/85 max-w-3xl">Not a slideshow. A real, working multi-project intelligence dashboard built in pure HTML — uploads an Excel, validates 20 business rules, renders 30-week Gantt, executive scorecard, owner analytics, and an Azure DevOps import sheet.</p>
+    <a href="https://customer-assets.emergentagent.com/job_adaptive-minds-6/artifacts/40iy2qmo_ResolvrPro_Student_Project_Tracker.html" target="_blank" rel="noopener" class="mt-10 block bg-white text-black nb-border nb-shadow-lg nb-press overflow-hidden">
+      <div class="grid lg:grid-cols-12">
+        <div class="lg:col-span-7 bg-[#FAFAFA] border-r-0 lg:border-r-[3px] border-b-[3px] lg:border-b-0 border-black p-8 md:p-10">
+          <div class="text-[10px] font-extrabold uppercase tracking-widest text-[#4B5563]">Capstone Project · Innovator Cohort</div>
+          <h3 class="mt-3 font-heading font-black text-3xl md:text-4xl leading-tight">ResolvrPro Student Project Tracker</h3>
+          <p class="mt-3 text-[#4B5563]">Single-file browser dashboard for student capstone tracking. Loads any Excel project plan, validates it, and gives leadership a single source of truth.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="bg-black text-white text-xs font-extrabold uppercase tracking-wider px-2 py-1 nb-border">HTML</span>
+            <span class="bg-black text-white text-xs font-extrabold uppercase tracking-wider px-2 py-1 nb-border">Chart.js</span>
+            <span class="bg-black text-white text-xs font-extrabold uppercase tracking-wider px-2 py-1 nb-border">Excel Parser</span>
+            <span class="bg-black text-white text-xs font-extrabold uppercase tracking-wider px-2 py-1 nb-border">Rule Engine</span>
+            <span class="bg-black text-white text-xs font-extrabold uppercase tracking-wider px-2 py-1 nb-border">ADO Importer</span>
+          </div>
+          <div class="mt-7 inline-flex items-center gap-2 bg-[#D4FF33] font-extrabold py-3 px-5 nb-border nb-shadow-sm">Open live capstone ↗</div>
+        </div>
+        <div class="lg:col-span-5 bg-white p-6 md:p-8">
+          <div class="text-[10px] font-extrabold uppercase tracking-widest text-[#4B5563]">What's inside</div>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>Project Intelligence Overview</b><div class="text-[#4B5563]">Health metrics, risk signals, owner workload.</div></div></li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>Project × Phase drill-down</b><div class="text-[#4B5563]">Expand sub-project, phase, story, task.</div></div></li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>3-layer data validation</b><div class="text-[#4B5563]">20 business rules block bad uploads.</div></div></li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>30-week Gantt timeline</b><div class="text-[#4B5563]">Risk-coloured bars, Today line.</div></div></li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>Azure DevOps import sheet</b><div class="text-[#4B5563]">Epic→Feature→Story→Task ready.</div></div></li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 bg-black mt-2"></span><div><b>Rule-based "Ask the Data"</b><div class="text-[#4B5563]">Live Q&amp;A engine. Zero backend.</div></div></li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <div class="mt-8 flex flex-wrap items-center gap-3"><span class="font-accent text-2xl text-[#D4FF33]" style="transform:rotate(-3deg);display:inline-block">That's the bar.</span><span class="font-semibold">Every Innovator-level learner leaves with a project of this depth.</span></div>
+  </div>
+</section>
+
+<!-- ABOUT THE FOUNDER -->
+<section id="founder" class="scroll-mt py-20 md:py-28 bg-[#F2EFFF] border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-black text-white nb-border px-4 py-2 nb-shadow-sm">
+      <span class="font-heading font-black text-lg text-[#FF6B6B]">MEET THE FOUNDER</span>
+      <span class="font-bold tracking-widest uppercase text-xs">20+ years · Banking · IT · Automation · Teaching</span>
+    </div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">Built by someone who's <span class="bg-[#D4FF33] px-2">done the work.</span><br/>Not just taught it.</h2>
+    
+    <div class="mt-12 grid lg:grid-cols-12 gap-8">
+      <!-- Left: Bio & Story -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="bg-white nb-border nb-shadow p-6 md:p-8">
+          <div class="font-accent text-3xl text-[#FF6B6B]" style="transform:rotate(-2deg);display:inline-block">From classroom to boardroom →</div>
+          <h3 class="mt-3 font-heading font-black text-3xl md:text-4xl">Kawaljeet Singh Ladhar</h3>
+          <p class="mt-2 text-lg font-bold text-[#4B5563]">DVP – Business Intelligence @ Kotak Mahindra Bank</p>
+          
+          <div class="mt-6 space-y-4 text-base leading-relaxed">
+            <p>I didn't start in tech. I started <b>teaching it</b>. In 2004, fresh out of college, I stood in front of a classroom at Apetech Computer Institute and taught SQL, C++, HTML, and Visual Basic to beginners. That's where I learned something most "AI educators" never will: <b>how to explain hard things simply.</b></p>
+            
+            <p>Over the next 20 years, I built a career across industries that most people only read about:</p>
+            
+            <div class="grid sm:grid-cols-2 gap-3 mt-4">
+              <div class="bg-[#FFD166]/30 nb-border p-3">
+                <div class="font-heading font-black text-sm">🏦 BANKING</div>
+                <div class="text-sm mt-1">HSBC → Kotak Mahindra Bank. From database analyst to DVP. Built BI platforms managing billions in retail assets. Led teams of 27 across 8 products.</div>
+              </div>
+              <div class="bg-[#4ECDC4]/30 nb-border p-3">
+                <div class="font-heading font-black text-sm">🌍 GLOBAL OPERATIONS</div>
+                <div class="text-sm mt-1">VFS Global – Head of Automation. Managed end-to-end automation across 30+ countries. Data modelling, vendor management, SLA compliance.</div>
+              </div>
+              <div class="bg-[#9D8DF1]/30 nb-border p-3">
+                <div class="font-heading font-black text-sm">💼 IT SERVICES</div>
+                <div class="text-sm mt-1">Tata Consultancy Services – Team Leader. Commercial card analytics, regulatory reporting for Visa & Mastercard across Asia.</div>
+              </div>
+              <div class="bg-[#FF6B6B]/30 nb-border p-3">
+                <div class="font-heading font-black text-sm">🏆 RECOGNITION</div>
+                <div class="text-sm mt-1">Kotak Young Leaders Council – <b>40 under 40</b>. Shadow to Board of Directors. ISO Certified (14K & 18K). Managing automation projects and teams.</div>
+              </div>
+            </div>
+            
+            <p class="mt-4">I've automated 30+ reports, built dashboards for C-suite executives, managed data ecosystems across continents, and turned manual processes into scalable systems. I know what <b>real-world skills</b> look like — because I've used them every day for two decades.</p>
+            
+            <p>Then I asked myself: <b>"Why aren't we teaching this to 14-year-olds?"</b></p>
+            
+            <p>ResolvrPro is the answer. Not theory. Not slides. The same frameworks, tools, and problem-solving approaches I use at a DVP level — adapted for young minds. Because if a 15-year-old learns this now, they won't spend 10 years catching up like I did.</p>
+          </div>
+        </div>
+        
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/kawaljeetsingh-ladhar-57038531" target="_blank" rel="noopener" class="block bg-black text-white nb-border nb-shadow nb-press p-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-xs font-extrabold uppercase tracking-widest text-[#4ECDC4]">Verify My Credentials</div>
+              <div class="font-heading font-black text-xl mt-1">View Full LinkedIn Profile →</div>
+              <div class="text-sm text-white/70 mt-1">20+ years · Kotak · VFS · TCS · HSBC · 40 under 40</div>
+            </div>
+            <div class="bg-[#4ECDC4] text-black nb-border w-12 h-12 grid place-items-center font-heading font-black text-2xl">in</div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Right: Value Proposition & Pricing -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Pricing Card -->
+        <div class="bg-[#D4FF33] nb-border nb-shadow-lg p-6 md:p-8">
+          <div class="font-accent text-2xl text-[#FF6B6B]" style="transform:rotate(-3deg);display:inline-block">The math is simple →</div>
+          <h3 class="mt-3 font-heading font-black text-4xl md:text-5xl leading-tight">₹125<span class="text-lg">/session</span></h3>
+          <div class="mt-4 bg-white nb-border p-4">
+            <div class="flex items-baseline gap-2">
+              <div class="font-heading font-black text-5xl">₹5,000</div>
+              <div class="text-sm font-bold text-[#4B5563]">/ year<br/>(40 sessions)</div>
+            </div>
+            <div class="mt-3 text-sm font-semibold">That's less than a Netflix + Spotify combo. But instead of entertainment, your child gets <b>future-proof skills</b>.</div>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm font-semibold">
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> 40 hands-on sessions (1 per week)</li>
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> Real projects, not multiple-choice tests</li>
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> AI tools, Canva, video editing, web dev</li>
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> Personal portfolio + capstone project</li>
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> Certificate of completion</li>
+            <li class="flex items-start gap-2"><span class="text-lg">✓</span> Demo Day presentation experience</li>
+          </ul>
+          <a href="#" onclick="openFitTest();return false;" class="mt-6 block btn-wa font-extrabold py-4 px-6 nb-border nb-shadow nb-press text-center">Take the Fit Test →</a>
+        </div>
+        
+        <!-- Who Is This For -->
+        <div class="bg-white nb-border nb-shadow p-6">
+          <div class="font-heading font-black text-xl">Who is this for?</div>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-start gap-3 bg-[#10B981]/20 nb-border p-3">
+              <div class="font-heading font-black text-2xl text-[#10B981]">🏫</div>
+              <div>
+                <div class="font-extrabold">Schools & Colleges</div>
+                <div class="text-sm text-[#4B5563]">Saturday batches at your campus. We bring the lab, the curriculum, and the mentors. You provide the room.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 bg-[#3B82F6]/20 nb-border p-3">
+              <div class="font-heading font-black text-2xl text-[#3B82F6]">👨‍👩‍👧</div>
+              <div>
+                <div class="font-extrabold">Parents</div>
+                <div class="text-sm text-[#4B5563]">Enrol your child directly. Hybrid options available. Give them the edge most kids won't have until college.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 bg-[#8B5CF6]/20 nb-border p-3">
+              <div class="font-heading font-black text-2xl text-[#8B5CF6]">🏢</div>
+              <div>
+                <div class="font-extrabold">Corporate CSR</div>
+                <div class="text-sm text-[#4B5563]">Sponsor a child's seat. Tax-deductible (80G in process). Quarterly impact reports. Meet your sponsored learner at Demo Day.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Credibility Stats -->
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-black text-white nb-border p-4 text-center">
+            <div class="font-heading font-black text-3xl">20+</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-white/70">Years Experience</div>
+          </div>
+          <div class="bg-[#FF6B6B] text-white nb-border p-4 text-center">
+            <div class="font-heading font-black text-3xl">4</div>
+            <div class="text-xs font-bold uppercase tracking-wider">Industries</div>
+          </div>
+          <div class="bg-[#4ECDC4] text-black nb-border p-4 text-center">
+            <div class="font-heading font-black text-3xl">30+</div>
+            <div class="text-xs font-bold uppercase tracking-wider">Reports Automated</div>
+          </div>
+          <div class="bg-[#FFD166] nb-border p-4 text-center">
+            <div class="font-heading font-black text-3xl">27</div>
+            <div class="text-xs font-bold uppercase tracking-wider">Team Members Led</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom CTA -->
+    <div class="mt-12 bg-black text-white nb-border nb-shadow-lg p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-accent text-2xl text-[#D4FF33]" style="transform:rotate(-2deg);display:inline-block">Still not sure? →</div>
+        <h3 class="mt-2 font-heading font-black text-2xl md:text-3xl">Book a 45-minute demo. No slides. Just outcomes.</h3>
+        <p class="mt-2 text-white/80">We'll walk your leadership team through the framework, show live demos, and answer every question.</p>
+      </div>
+      <a href="#book" class="bg-[#D4FF33] text-black font-extrabold py-4 px-7 nb-border nb-shadow nb-press whitespace-nowrap">Book Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9 SKILLS -->
+<section class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-black text-white nb-border px-4 py-2 nb-shadow-sm"><span class="font-heading font-black text-lg text-[#9D8DF1]">FRAMEWORK</span></div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">Learners don't just learn AI.<br/><span class="text-[#FF6B6B]">They learn 9 skills</span> AI can't replace.</h2>
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid"></div>
+  </div>
+</section>
+
+<!-- SPONSORSHIP -->
+<section id="sponsorship" class="scroll-mt py-20 md:py-28 bg-[#FFF7E6] border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10">
+    <div class="inline-flex items-center gap-3 bg-black text-white nb-border px-4 py-2 nb-shadow-sm"><span class="font-heading font-black text-lg text-[#FF6B6B]">PARTNER WITH US</span></div>
+    <h2 class="mt-6 font-heading font-black text-4xl md:text-6xl leading-[.95] tracking-tight">Three ways to give a learner<br/><span class="bg-[#D4FF33] px-2">a real future advantage.</span></h2>
+    <div id="sponsor-grid" class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- BOOK / INQUIRY -->
+<section id="book" class="scroll-mt py-20 md:py-28 bg-[#D4FF33] border-y-[3px] border-black grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <div class="font-accent text-3xl text-[#FF6B6B]" style="transform:rotate(-3deg);display:inline-block">Our promise →</div>
+      <h2 class="mt-3 font-heading font-black text-4xl md:text-5xl leading-[.95] tracking-tight">Book a 45-minute demo for your leadership team.</h2>
+      <p class="mt-5 text-base md:text-lg">We'll walk your principal, head of school, and senior teachers through the framework, show live demos, and propose how it fits into your timetable.<br/><br/><b>No PowerPoints. Just outcomes.</b></p>
+      <ul class="mt-6 space-y-2 font-semibold">
+        <li>✓ Adaptable learners</li>
+        <li>✓ Confident communicators</li>
+        <li>✓ Creative problem solvers</li>
+        <li>✓ Responsible technology users</li>
+      </ul>
+    </div>
+    <form id="book-form" class="lg:col-span-7 bg-white nb-border nb-shadow-lg p-6 md:p-8 space-y-5">
+      <div class="flex items-center gap-2 bg-[#25D366]/15 nb-border p-3"><span class="text-2xl">💬</span><p class="font-bold text-sm">Hit send below — your details land on our WhatsApp instantly, beautifully formatted.</p></div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">School / Organisation *</span><input name="school" required class="input"/></label>
+        <label class="block"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">Your name *</span><input name="name" required class="input"/></label>
+        <label class="block"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">Email *</span><input type="email" name="email" required class="input"/></label>
+        <label class="block"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">Phone</span><input name="phone" class="input"/></label>
+        <label class="block sm:col-span-2"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">Learners in your school / family</span>
+          <select name="learners" class="input"><option value="">Select…</option><option>1 (just my child)</option><option>2 (siblings)</option><option>Under 50</option><option>50 – 300</option><option>300 – 800</option><option>800 – 1500</option><option>1500+</option></select>
+        </label>
+        <label class="block sm:col-span-2"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">Your role</span>
+          <select name="role" class="input"><option value="">Select…</option><option>Parent</option><option>Principal</option><option>Head of School</option><option>Coordinator</option><option>Teacher</option><option>CSR / Donor</option><option>Other</option></select>
+        </label>
+        <label class="block sm:col-span-2"><span class="block font-extrabold text-xs uppercase tracking-widest mb-2">What would you like us to focus on?</span><textarea name="msg" rows="3" class="input" placeholder="Tell us your goals — fit test, school partnership, sponsorship, anything."></textarea></label>
+      </div>
+      <button type="submit" class="btn-wa inline-flex items-center gap-2 font-extrabold py-4 px-7 nb-border nb-shadow nb-press">💬 Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-12">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 grid md:grid-cols-3 gap-8 items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-[#D4FF33] text-black grid place-items-center font-heading font-black text-xl border-[3px] border-white">R</div>
+      <div>
+        <div class="font-heading font-black text-xl">Resolvr<span class="text-[#FF6B6B]">Pro</span></div>
+        <div class="text-[10px] font-bold tracking-widest uppercase text-white/70">Future Skills Academy</div>
+      </div>
+    </div>
+    <p class="text-sm text-white/80">Careers will change. Technology will change. The ability to <span class="text-[#D4FF33] font-bold">learn, create, and solve problems</span> will always matter.</p>
+    <div class="md:text-right text-sm">
+      <a href="#" id="footer-talk" class="font-extrabold underline decoration-[#25D366] decoration-4 underline-offset-4">💬 WhatsApp us →</a>
+      <div class="mt-2 text-white/60 text-xs">© <span id="year"></span> ResolvrPro Future Skills Academy</div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- FLOATING WHATSAPP -->
+<a href="#" id="fab-wa" class="fab" aria-label="Chat on WhatsApp">💬 <span class="hidden sm:inline">Chat with us</span></a>
+
+<!-- SESSION MODAL -->
+<div id="modal" class="fixed inset-0 z-50 hidden">
+  <div id="modal-backdrop" class="absolute inset-0 bg-black/70"></div>
+  <div class="absolute inset-0 grid place-items-center p-4 overflow-auto">
+    <div id="modal-card" class="relative bg-white nb-border nb-shadow-lg w-full max-w-3xl max-h-[90vh] overflow-auto fade-in">
+      <div id="modal-head" class="p-6 border-b-[3px] border-black"></div>
+      <div id="modal-body" class="p-6 space-y-5"></div>
+      <div class="p-4 border-t-[3px] border-black flex items-center justify-between bg-[#FAFAFA] flex-wrap gap-2">
+        <button id="modal-prev" class="bg-white nb-border nb-shadow-sm py-2 px-4 font-extrabold nb-press">← Prev</button>
+        <button id="modal-close" class="bg-black text-white nb-border nb-shadow-sm py-2 px-4 font-extrabold nb-press">Close</button>
+        <button id="modal-next" class="bg-[#D4FF33] nb-border nb-shadow-sm py-2 px-4 font-extrabold nb-press">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FIT TEST QUIZ MODAL -->
+<div id="fit-test-modal" class="quiz-overlay hidden">
+  <div class="quiz-card">
+    <div id="quiz-inner"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
