@@ -1,0 +1,27 @@
+{
+  "level": "explorer",
+  "session": 8,
+  "videos": [
+    {
+      "title": "Video 1 - Session Topic Introduction",
+      "description": "Brief description of what this video covers",
+      "file": "video-1.mp4",
+      "duration": "5:30",
+      "type": "lecture"
+    },
+    {
+      "title": "Video 2 - Practical Demonstration",
+      "description": "Step-by-step walkthrough of the session activity",
+      "file": "video-2.mp4",
+      "duration": "8:15",
+      "type": "demo"
+    },
+    {
+      "title": "Video 3 - Summary & Key Takeaways",
+      "description": "Recap of concepts learned and homework preview",
+      "file": "video-3.mp4",
+      "duration": "3:45",
+      "type": "summary"
+    }
+  ]
+}

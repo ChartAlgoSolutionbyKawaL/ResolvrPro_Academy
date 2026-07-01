@@ -1,0 +1,13 @@
+{
+  "level": "explorer",
+  "session": 1,
+  "videos": [
+    {
+      "title": "Welcome to Future Skills",
+      "description": "Introduction to the program and what you will learn",
+      "file": "welcome.mp4",
+      "duration": "3:45",
+      "type": "lecture"
+    }
+  ]
+}

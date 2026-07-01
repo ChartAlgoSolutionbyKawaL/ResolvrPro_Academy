@@ -1,0 +1,139 @@
+================================================================
+  RESOLVRPRO — VIDEO FOLDER STRUCTURE GUIDE
+================================================================
+
+TOTAL: 4 Levels × 40 Sessions = 160 Video Folders
+
+FOLDER STRUCTURE:
+-----------------
+videos/
+├── explorer/                    (Level 1 — Foundation)
+│   ├── session-01/
+│   │   ├── README.txt           ← Folder info
+│   │   ├── videos.json          ← Video metadata (edit this!)
+│   │   ├── video-1.mp4          ← Your video files go here
+│   │   ├── video-2.mp4
+│   │   └── video-3.mp4
+│   ├── session-02/
+│   ├── session-03/
+│   ... (40 sessions total)
+│   └── session-40/
+│
+├── creator/                     (Level 2 — Build · Design)
+│   ├── session-01/
+│   ... (40 sessions)
+│   └── session-40/
+│
+├── builder/                     (Level 3 — Apply · Solve)
+│   ├── session-01/
+│   ... (40 sessions)
+│   └── session-40/
+│
+└── innovator/                   (Level 4 — Ship · Lead)
+    ├── session-01/
+    ... (40 sessions)
+    └── session-40/
+
+
+HOW TO ADD VIDEOS:
+------------------
+
+1. PLACE VIDEO FILES:
+   Copy your .mp4 or .webm video files into the correct session folder.
+   Example: videos/explorer/session-01/video-1.mp4
+
+2. EDIT videos.json:
+   Each session folder has a videos.json template. Edit it to match
+   your actual video files:
+
+   {
+     "level": "explorer",
+     "session": 1,
+     "videos": [
+       {
+         "title": "Introduction to Future Skills",
+         "description": "What are future skills and why they matter",
+         "file": "video-1.mp4",
+         "duration": "5:30",
+         "type": "lecture"
+       },
+       {
+         "title": "Growth Mindset Explained",
+         "description": "Fixed vs growth mindset with real examples",
+         "file": "video-2.mp4",
+         "duration": "8:15",
+         "type": "demo"
+       }
+     ]
+   }
+
+3. VIDEO TYPES (for gallery labels):
+   - "lecture"    — Teaching/explanation video
+   - "demo"       — Practical demonstration
+   - "summary"    — Recap and key takeaways
+   - "activity"   — Guided activity walkthrough
+   - "interview"  — Expert or peer interview
+   - "review"     — Homework/project review
+
+4. OPTIONAL — THUMBNAILS:
+   Add a thumbnail image (jpg/png) and reference it in videos.json:
+   {
+     "title": "My Video",
+     "file": "video-1.mp4",
+     "thumbnail": "thumb-1.jpg",
+     ...
+   }
+
+5. OPTIONAL — YOUTUBE/VIMEO EMBEDS:
+   Instead of local files, you can use YouTube or Vimeo URLs:
+   {
+     "title": "My Video",
+     "file": "https://www.youtube.com/embed/VIDEO_ID",
+     "duration": "5:30",
+     "type": "lecture"
+   }
+
+
+SESSION TOPICS REFERENCE:
+--------------------------
+
+EXPLORER LEVEL (40 sessions):
+ 01: Welcome to Future Skills
+ 02: Basics of Computers & Internet
+ 03: Introduction to AI
+ 04: ChatGPT & Prompt Engineering
+ 05: Digital Safety & Cyber Awareness
+ 06: Canva Basics — Design Fundamentals
+ 07: Poster Design — Visual Communication
+ 08: Visual Storytelling — 4-Panel Stories
+ 09: Presentation Skills — Speak with Confidence
+ 10: Digital Story Project
+ 11: AI Learning Tools — Study Smarter
+ 12: Research with AI — Verify Everything
+ 13: Advanced Canva — Brand Kits & Layers
+ 14: Infographics — Data Visualisation
+ 15: Video Creation — Plan, Shoot, Edit
+ 16: Video Fun — Stop Motion & Experiments
+ 17: Personal Website — Plan & Wireframe
+ 18: Personal Website — Build with HTML/CSS
+ 19: Personal Website — Add Content & Polish
+ 20: Personal Website — Publish & Share
+ 21-40: (Advanced Explorer sessions)
+
+CREATOR LEVEL (40 sessions):
+ 01-40: Digital brand, Canva Pro, social media,
+        content strategy, video editing, portfolio
+
+BUILDER LEVEL (40 sessions):
+ 01-40: Web development, JavaScript, databases,
+        automation, AI integration, real projects
+
+INNOVATOR LEVEL (40 sessions):
+ 01-40: AI-powered solutions, entrepreneurship,
+        leadership, capstone project, demo day
+
+
+The website will automatically load and display
+videos from these folders when a user clicks
+on a session in the LMS or Curriculum section.
+================================================================
