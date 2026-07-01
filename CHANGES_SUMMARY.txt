@@ -1,0 +1,132 @@
+================================================================
+  RESOLVRPRO — LMS & CURRICULUM MERGE + MODAL CONTROLS
+================================================================
+
+CHANGES MADE:
+-------------
+
+1. REMOVED SEPARATE LMS SECTION
+   - Deleted the standalone "LMS DASHBOARD MODULE" section
+   - Removed the #lms navigation link
+   - Merged all LMS functionality into the Curriculum section
+
+2. MERGED CURRICULUM & LMS INTO ONE SECTION
+   - New section id: "curriculum"
+   - Contains both LMS stats/progress tracking AND session browser
+   - Light background (#F2EFFF) instead of black
+   - Level buttons now have white backgrounds (not dark)
+   - Session cards remain the same interactive style
+   - Progress tracking (localStorage) still works
+   - "Mark as Complete" toggle still in session modal
+
+3. NAVIGATION UPDATED
+   - Removed separate "LMS" nav link
+   - Renamed "Curriculum" to "Curriculum & LMS"
+   - Updated in both desktop and mobile nav
+
+4. SESSION MODAL — WINDOW CONTROLS ADDED
+   - New title bar with traffic-light buttons (red/yellow/green dots)
+   - Minimize button (—): Collapses modal to title bar only
+   - Maximize button (□): Expands modal to full viewport
+   - Close button (✕): Closes modal (same as existing Close button)
+   - Title bar shows: "Level · Session N: Title"
+   - Smooth CSS transitions between states
+   - States: normal (800px) → maximized (100vw) → minimized (44px)
+
+5. VIDEOS TAB IN SESSION MODAL
+   - New "🎬 Videos" tab between Theory and Practice
+   - Shows video gallery with cards
+   - Each card has: thumbnail, title, description, duration, type
+   - Click card to open video player
+   - Video player has: Normal, Large, Fullscreen resize options
+   - Supports: MP4, WebM, YouTube embed, Vimeo embed
+   - Auto-loads videos.json from session folder
+
+6. VIDEO FOLDER STRUCTURE
+   - 4 levels × 40 sessions = 160 folders
+   - Each folder has: README.txt + videos.json template
+   - Path: videos/{level}/session-{NN}/
+   - Example: videos/explorer/session-01/
+
+7. CSS ADDITIONS
+   - Modal window control styles (modal-ctrl-btn)
+   - Modal size states (modal-normal, modal-maximized, modal-minimized)
+   - Smooth transitions for resize
+   - Video gallery card styles
+   - Video player overlay styles
+
+8. JAVASCRIPT FIXES
+   - Restored missing code (openSession, SESSION_DETAILS, etc.)
+   - Removed old curriculum tabs code (level-tabs/level-content)
+   - Added null checks for DOM elements
+   - LMS rendering updated for light background
+   - Modal minimize/maximize/close event handlers
+   - Video gallery loader (fetches videos.json)
+   - Video player with resize controls
+
+FILES MODIFIED:
+---------------
+- index.html          (494 lines)
+- css/style.css       (138 lines)
+- js/app.js          (1018 lines)
+- js/data.js           (65 lines, unchanged)
+
+STRUCTURE:
+----------
+output/
+├── index.html
+├── test.html              ← Test page to verify scripts
+├── CHANGES_SUMMARY.txt    ← This file
+├── css/
+│   └── style.css
+├── js/
+│   ├── data.js
+│   └── app.js
+└── videos/
+    ├── VIDEO_FOLDERS_GUIDE.txt
+    ├── explorer/session-01/ ... session-40/
+    ├── creator/session-01/ ... session-40/
+    ├── builder/session-01/ ... session-40/
+    └── innovator/session-01/ ... session-40/
+
+SECTION FLOW (final):
+---------------------
+1. Hero
+2. About (Founder)
+3. The Problem (AI Grading AI)
+4. Why Now (Statistics)
+5. What We Teach (6 Pillars)
+6. Hook (Reinforcement)
+7. Levels (4 level cards)
+8. Curriculum & LMS (merged — stats + level buttons + session grid)
+9. Capstone
+10. Sponsorship
+11. Book/Inquiry
+12. Footer
+
+SESSION MODAL TABS:
+-------------------
+1. 📚 Theory
+2. 🎬 Videos (NEW)
+3. 🛠 Practice
+4. 🔧 Tools
+5. 📝 Homework
+6. ✦ AI Prompt (if available)
+
+MODAL WINDOW CONTROLS:
+----------------------
+[●] [●] [●]  Session Title          [—] [□] [✕]
+ red  yel  grn                       min max close
+
+TESTING:
+--------
+1. Open test.html in browser — should show all tests passing
+2. Open index.html — navigate to "Curriculum & LMS"
+3. Click any session — modal opens with title bar
+4. Click minimize (—) — modal collapses to title bar
+5. Click maximize (□) — modal expands to full screen
+6. Click close (✕) — modal closes
+7. Click "🎬 Videos" tab — shows video gallery placeholder
+8. Add videos to folders and edit videos.json — gallery populates
+
+================================================================

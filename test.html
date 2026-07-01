@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ResolvrPro — Test Page</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+    #test-result { padding: 20px; margin: 20px 0; border: 2px solid #ccc; border-radius: 8px; }
+    .success { background: #d4edda; border-color: #28a745; }
+    .error { background: #f8d7da; border-color: #dc3545; }
+    .info { background: #e7f3ff; border-color: #0066cc; }
+    h1 { color: #333; }
+    .check { color: #28a745; }
+    .fail { color: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>ResolvrPro — Script Test</h1>
+  <div id="test-result">Testing scripts...</div>
+  
+  <!-- Required DOM elements -->
+  <div id="levels-grid" style="display:none"></div>
+  <div id="lms-stats" style="display:none"></div>
+  <div id="lms-level-btns" style="display:none"></div>
+  <div id="lms-sessions" style="display:none"></div>
+  <div id="sponsor-grid" style="display:none"></div>
+  <div id="modal" style="display:none"></div>
+  <div id="modal-head" style="display:none"></div>
+  <div id="modal-body" style="display:none"></div>
+  
+  <script src="js/data.js"></script>
+  <script>
+    const results = [];
+    
+    function test(name, fn) {
+      try {
+        fn();
+        results.push({ name, pass: true });
+      } catch(e) {
+        results.push({ name, pass: false, error: e.message });
+      }
+    }
+    
+    // Test data.js
+    test('DATA object exists', () => {
+      if (typeof DATA === 'undefined') throw new Error('DATA is undefined');
+    });
+    
+    test('DATA has 4 levels', () => {
+      if (DATA.levels.length !== 4) throw new Error(`Expected 4 levels, got ${DATA.levels.length}`);
+    });
+    
+    test('Each level has 40 sessions', () => {
+      DATA.levels.forEach(l => {
+        const count = DATA.sessions[l.slug].length;
+        if (count !== 40) throw new Error(`${l.name} has ${count} sessions, expected 40`);
+      });
+    });
+    
+    test('WhatsApp number exists', () => {
+      if (!DATA.whatsapp) throw new Error('WhatsApp number missing');
+    });
+    
+    // Display results
+    const el = document.getElementById('test-result');
+    const passed = results.filter(r => r.pass).length;
+    const failed = results.filter(r => !r.pass).length;
+    
+    let html = `<h2>Test Results: ${passed} passed, ${failed} failed</h2><ul>`;
+    results.forEach(r => {
+      const icon = r.pass ? '<span class="check">✓</span>' : '<span class="fail">✗</span>';
+      html += `<li>${icon} <b>${r.name}</b>`;
+      if (!r.pass) html += ` — ${r.error}`;
+      html += `</li>`;
+    });
+    html += '</ul>';
+    
+    el.innerHTML = html;
+    el.className = failed === 0 ? 'success' : 'error';
+  </script>
+  <script src="js/app.js"></script>
+  <script>
+    // Test app.js loaded
+    const el = document.getElementById('test-result');
+    el.innerHTML += '<h3>app.js loaded successfully</h3>';
+    el.innerHTML += '<p class="info">Open <a href="index.html">index.html</a> to see the full site.</p>';
+  </script>
+</body>
+</html>
